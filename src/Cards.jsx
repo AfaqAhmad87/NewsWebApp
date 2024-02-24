@@ -45,7 +45,7 @@ function Cards() {
           value={value1}
         />
         <button
-          className="btn btn-outline-success my-2 my-sm-0 w-[100px]  "
+          className="btn btn-outline-success  w-[100px] sm: "
           type="submit"
           onClick={fetchData}
         >
