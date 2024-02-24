@@ -37,15 +37,15 @@ function Cards() {
   // }
   return (
     <>
-      <div className="form-inline flex flex-row gap-2 p-2">
+      <div className="form-inline flex flex-row gap-2 lg:p-2 sm:mt-3">
         <input
-          className="form-control  w-[100px]"
-          placeholder="Search by country short name e.g America is us"
+          className="form-control  w-[100px] sm:h-12 "
+          placeholder="Search by short name e.g America is us"
           onChange={(e) => setvalue(e.target.value)}
           value={value1}
         />
         <button
-          className="btn btn-outline-success my-2 my-sm-0 w-[100px]"
+          className="btn btn-outline-success my-2 my-sm-0 w-[100px]  "
           type="submit"
           onClick={fetchData}
         >
@@ -60,10 +60,10 @@ function Cards() {
       />
       <button onClick={fetchData}>button</button> */}
       <main className="w-[100%]">
-        <div className="grid grid-cols-3 w-[90%] m-auto">
+        <div className=" sm:grid sm:grid-cols-1 sm:gap-3 sm:pl-[26px] lg:grid lg:grid-cols-3 w-[90%] m-auto lg:gap-y-5   ">
           {news.map((ele) => {
             return (
-              <Card style={{ width: "18rem" }} id="cards">
+              <Card style={{ width: "18rem" }} id="cards" className="">
                 <Card.Img variant="top" src={ele?.urlToImage} />
                 <Card.Body>
                   <Card.Title>{ele?.title}</Card.Title>
